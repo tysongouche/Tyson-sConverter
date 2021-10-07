@@ -1,0 +1,47 @@
+class DecConverter:
+    def __init__(self, *args):
+        self.nums = args
+        if len(args) > 1:
+            print(f'Your decimal numbers are {list(self.nums)}')
+        elif len(args) > 0:
+            print(f'Your number is {self.nums}')
+
+    #Dec To Hex
+    def hex(self):
+        print(f'In Hex, they are {[hex(x) for x in self.nums]}')
+
+    #Dec To Bin
+    def bin(self):
+        print(f'In Binary, they are {[bin(x) for x in self.nums]}')
+
+class HexConverter:
+    def __init__(self, *args):
+        self.nums = args
+        if len(args) > 1:
+            print(f'Your Hex numbers are {list(self.nums)}')
+        elif len(args) > 0:
+            print(f'Your number is {self.nums}')
+
+    #Hex to Dec
+    def dec(self):
+        print(f'In Decimal, they are {[int(str(x), 16) for x in self.nums]}')
+
+    #Hex to Bin
+    def bin(self):
+        print(f'In Binary, they are {[bin(int(str(x), 16)) for x in self.nums]}')
+
+class BinConverter:
+    def __init__(self, *args):
+        self.nums = args
+        if len(args) > 1:
+            print(f'Your numbers are {self.nums}')
+        elif len(args) > 0:
+            print(f'Your number is {self.nums}')
+
+    #Bin to Dec
+    def dec(self):
+        print(f'In Decimal, they are {[int(str(x), 2) for x in self.nums]}')
+
+     #Bin to Hex
+    def hex(self):
+        print(f'In Hex, they are {[hex(int(str(x), 2)) for x in self.nums]}')
